@@ -12,7 +12,7 @@
 * Fernando Leon.
 * Patrick Celis.
 
-
+<details>
 <summary>Libros:</summary>
 - Como hacer que te pasen cosas buenas.
 - El caballero Carmelo
