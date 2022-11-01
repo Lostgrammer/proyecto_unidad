@@ -4,8 +4,13 @@
 ## Proyecto final otorgado por Silabuz.
 
 ## Participantes:
-Carlos Vega.
-Fernando Leon.
-Patrick Celis.
+* Carlos Vega.
+* Fernando Leon.
+* Patrick Celis.
+
+
+<summary>Libros:</summary>
+* Como hacer que te pasen cosas buenas.
+* El caballero Carmelo
 
 # Licencia
