@@ -1,5 +1,5 @@
 # Proyecto final de la Unidad 1
-[Página oficial de la ISBN] (https://www.bnp.gob.pe/servicios/isbn/)
+[Página oficial de la ISBN](https://www.bnp.gob.pe/servicios/isbn/)
 
 ![Libreria](https://www.telesurtv.net/__export/1510353963341/sites/telesur/img/multimedia/2017/11/10/librerxa11.jpg)
 
@@ -14,9 +14,9 @@
 
 <details>
 <summary>Libros:</summary>
-- * Como hacer que te pasen cosas buenas.
-- * El caballero Carmelo.
-- * El principito.
+- [Como hacer que te pasen cosas buenas.]
+- [El caballero Carmelo.]
+- [El principito.]
   
 </details>
 
