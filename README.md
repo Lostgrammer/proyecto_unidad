@@ -14,7 +14,10 @@
 
 <details>
 <summary>Libros:</summary>
-- Como hacer que te pasen cosas buenas.
-- El caballero Carmelo
+- [Cosas buenas](Como hacer que te pasen cosas buenas.)
+- [Carmelo](El caballero Carmelo.)
+  
+</details>
 
 # Licencia
+MIT
