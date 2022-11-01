@@ -21,7 +21,9 @@
 <details>
 <summary>Libros:</summary>
 - Como hacer que te pasen cosas buenas.
+  
 - El caballero Carmelo.
+  
 - El principito.
   
 </details>
