@@ -3,4 +3,9 @@
 
 ## Proyecto final otorgado por Silabuz.
 
+## Participantes:
+Carlos Vega.
+Fernando Leon.
+Patrick Celis.
+
 # Licencia
