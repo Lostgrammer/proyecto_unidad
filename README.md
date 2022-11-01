@@ -14,8 +14,9 @@
 
 <details>
 <summary>Libros:</summary>
-- [Cosas buenas](Como hacer que te pasen cosas buenas.)
-- [Carmelo](El caballero Carmelo.)
+* Como hacer que te pasen cosas buenas.
+* El caballero Carmelo.
+* El principito.
   
 </details>
 
