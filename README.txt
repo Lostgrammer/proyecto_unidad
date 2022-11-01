@@ -3,7 +3,7 @@
 
 ![Libreria](https://www.telesurtv.net/__export/1510353963341/sites/telesur/img/multimedia/2017/11/10/librerxa11.jpg)
 
-## Proyecto final otorgado por Silabuz.
+## Proyecto otorgado por:
 
 ![Silabuz](https://uploads-ssl.webflow.com/6320941e9612f79b0e2f61b1/63209670562cf7eb6f31131a_silabuz-logo-rebrand-standar.p)
 
