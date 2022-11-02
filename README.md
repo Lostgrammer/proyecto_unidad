@@ -15,10 +15,6 @@
  </div>
 <hr />
 
-## Participantes:
-* Carlos Vega.
-* Fernando Leon.
-* Patrick Celis.
 
 <details>
 <summary>Libros:</summary>
@@ -30,6 +26,17 @@
 - El principito.
   
 </details>
+
+#Parte 2 del proyecto.
+[Poke Api v2]( https://pokeapi.co/docs/v2)
+
+![Pokemon](https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/6420b-pikachu-sentado-png.png)
+
+
+## Participantes:
+* Carlos Vega.
+* Fernando Leon.
+* Patrick Celis.
 
 # Licencia
 MIT
