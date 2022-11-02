@@ -3,3 +3,61 @@ Opción 2: Listar pokemons por forma. Se ingresa alguna forma (deben sugerir val
 Opción 3: Listar pokemons por habilidad. Se deben sugerir opciones a ingresar para interactuar.
 Opción 4: Listar pokemons por habitat. Se deben sugerir opciones a ingresar para interactuar.
 Opción 5: Listar pokemons por tipo. Se deben sugerir opciones a ingresar para interactuar. """
+
+class Pokemon:
+    def _init_(self, nombre):
+        self.nombre_pokemon = nombre
+        self.peso_pokemon = 0
+        self.lista_de_habilidades_pokemon = []
+        self.ataque_pokemon = 0
+        self.ataque_especial_pokemon = 0
+        self.defensa_pokemon = 0
+        self.defensa_especial_pokemon = 0
+
+    def _del_(self):
+        return None
+
+    def set_info_pokemon(self, nombre, peso, lista_habilidades, ataque, ataque_especial, defensa, defensa_especial):
+        self.nombre_pokemon = nombre
+        self.peso_pokemon = peso
+        self.lista_de_habilidades_pokemon = lista_habilidades
+        self.ataque_pokemon = ataque
+        self.ataque_especial_pokemon = ataque_especial
+        self.defensa_pokemon = defensa
+        self.defensa_especial_pokemon = defensa_especial
+
+    def mostrar_resumen_pokemon(self):
+        print("=========================================================")
+        print(f"Pokemon: {self.nombre_pokemon.capitalize()}")
+        print(f"Peso: {(self.peso_pokemon / 10)} kg")
+        print(f"Habilidades: {', '.join(self.lista_de_habilidades_pokemon)}")
+        print(f"Ataque: {self.ataque_pokemon}")
+        print(f"Ataque especial: {self.ataque_especial_pokemon}")
+        print(f"Defensa: {self.defensa_pokemon}")
+        print(f"Defensa especial: {self.defensa_especial_pokemon}")
+
+    def conseguir_resumen_pokemon(self, nombre_pokemon: str) -> dict:
+        import requests
+        peticion = requests.get(f"https://pokeapi.co/api/v2/pokemon/{nombre_pokemon}")
+        datos = peticion.json()
+        # print(datos)
+
+        peso = datos["weight"]
+        # print(peso)
+        lista_de_habilidades = [habilidad["ability"]["name"] for habilidad in datos["abilities"]]
+        # print(lista_de_habilidades)
+        stats_poke = datos["stats"]
+        # print(stats_poke)
+        ataque = stats_poke[1]["base_stat"]
+        defensa = stats_poke[2]["base_stat"]
+        ataque_especial = stats_poke[3]["base_stat"]
+        defensa_especial = stats_poke[4]["base_stat"]
+
+        pokemon_data.set_info_pokemon(nombre_pokemon, peso, lista_de_habilidades, ataque, ataque_especial, defensa, defensa_especial)
+
+        pokemon_data.mostrar_resumen_pokemon()
+
+pokemon_ejemplo = "ditto"
+
+pokemon_data = Pokemon(f"{pokemon_ejemplo}")
+pokemon_data.conseguir_resumen_pokemon(pokemon_data.nombre_pokemon)
