@@ -30,8 +30,11 @@
 # Parte 2 del proyecto
 [Poke Api v2]( https://pokeapi.co/docs/v2)
 
-![Pokemon](https://d275t8dp8rxb42.cloudfront.net/pokemon/portrait/Pikachu.png)
+<hr />
 
+![Pokemon](https://i0.wp.com/eltallerdehector.com/wp-content/uploads/2022/06/6420b-pikachu-sentado-png.png)
+
+<hr />
 
 ## Participantes:
 * Carlos Vega.
