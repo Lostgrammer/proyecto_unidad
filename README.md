@@ -30,7 +30,7 @@
 # Parte 2 del proyecto
 [Poke Api v2]( https://pokeapi.co/docs/v2)
 
-![Pokemon](https://i.pinimg.com/564x/76/47/9d/76479dd91dc55c2768ddccfc30a4fbf5.jpg)
+![Pokemon](https://d275t8dp8rxb42.cloudfront.net/pokemon/portrait/Pikachu.png)
 
 
 ## Participantes:
