@@ -13,3 +13,15 @@ def mostrar_libros_guardados():
 
             while s != 0:
              menu()
+            
+#define clase
+global lista
+lista = list()
+class libro:
+    def __init__(self):
+     self.ids = ""
+     self.título = ""
+     self.género = ""
+     self.isbn = ""
+     self.editorial =""
+     self.autores = ""
