@@ -25,3 +25,22 @@ class libro:
      self.isbn = ""
      self.editorial =""
      self.autores = ""
+            
+         
+#fncion para poder registrar libros    
+def registrarlibro():
+    print("\nAQUI PUEDES REGISTRAR DATOS DE UN NUEVO LIBRO")
+    print("*********************************************")
+    l = libro()
+    l.ids = (input("introduzca el id del libro: "))
+    l.título = (input("introduzca el título del libro: "))
+    l.género= (input("introduzca a que género pertenece el libro: "))
+    l.isbn= (input("introduzca el isbn del libro: "))
+    l.editorial = (input("introduzca la editorial del libro: "))
+    l.autores = (input("introduzca el el autor o los autores del libro: "))
+    lista.append(l)
+    s = int(input("\npresione 0 para volver al menú principal: "))
+    print("")
+
+    while s != 0:
+        menu()
