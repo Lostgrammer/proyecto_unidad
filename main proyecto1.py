@@ -44,3 +44,14 @@ def registrarlibro():
 
     while s != 0:
         menu()
+funcion para ver los libros registrados
+def ver_libros_reg():
+    print('\n**********AQUI PUEDES VER LIBROS REGISTRADOS**********')
+    for l in lista:
+        print (l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
+
+    s = int(input("\npresione 0 para volver al menú principal: "))
+    print("")
+
+    while s != 0:
+        menu()
