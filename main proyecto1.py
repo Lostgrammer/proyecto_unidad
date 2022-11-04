@@ -70,3 +70,46 @@ def buscarlibro():
 
     while s != 0:
         menu()
+#funcion menu
+def menu() :
+    selec = 0
+    salir = 10
+    print("\nBIENVENIDOS A LA MICROBIBLIOTECA")
+    print("********************************")
+    while selec != salir:
+        print("\n--Elija una de las opiones:--\n")
+        print("1. Mostrar libros guardados")
+        print("2. Agregar informacion de un nuevo libro")
+        print("3. Ver libros registrados")
+        print("4. Eliminar un libro")
+        print("5. Buscar libro por codigo ISBN")
+        print("6. Ordenar libros por titulo")
+        print("7. Buscar libro por autor, editorial, genero")
+        print("8. Buscar libro por cantidad de autores")
+        print("9. Editar datos de un libro")
+        print("10. Guardar libro")
+        selec = int(input("ingrese su opcion: "))
+
+        if selec == 1:
+            mostrar_libros_guardados()
+        elif selec == 2:
+            registrarlibro()
+        elif selec == 3:
+            ver_libros_reg()
+        elif selec == 4:
+            eliminarlibro()
+        elif selec == 5:
+            buscarlibro()
+        elif selec == 6:
+            print('ga')
+        elif selec == 7:
+            print('ga')
+        elif selec == 8:
+            buscarlibro()
+        elif selec == 9:
+            print('ga')
+        elif selec == 10:
+            print('ga')
+        else:
+            print('Asigne un valor valido')              
+menu()
