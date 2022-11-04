@@ -1,5 +1,5 @@
-Id,Título,Género,ISBN,Editorial,Autor(es)
+id,titulo,genero,ISBN,editorial,autor
 14,"Como hacer que te pasen cosas buenas",Autoayuda,9788467053302,Planeta,"Marian Rojas Estape"
-9,"El Caballero Carmelo",Ficción,9789972348624,Talleres Tipográficos de la Penitenciaría de Lima,"Abraham Valdelomar Pinto"
-37,"El Principito",Fábula,9783140464079,Berenice,"Antoine de Saint-Exupéry"
-548,"El universo: Guia de viaje",Guia turistica,9788408216728,GeoPlaneta,"Oliver Berry" "Mark A. Garlick"
+9,"El Caballero Carmelo",Ficcion,9789972348624,Talleres Tipograficos de la Penitenciaría de Lima,"Abraham Valdelomar Pinto"
+37,"El Principito",Fabula,9783140464079,Berenice,"Antoine de Saint-Exupéry"
+548,"El universo: Guía de viaje",Guia turistica,9788408216728,GeoPlaneta,"Oliver Berry" "Mark A. Garlick"
