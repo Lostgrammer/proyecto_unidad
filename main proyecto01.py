@@ -1,20 +1,20 @@
 import pandas as pd
 
 # para inporta archivo csv
-basedatoss = pd.read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
+basedatoss = pd.read_csv('Libros.csv',header=0)
 
 
 # opcion 1 mostrar libros guardados
+
 def mostrar_libros_guardados():
     print("********** ESTOS SON NUESTROS LIBROS GUARDADOS **********")
-    print(basedatoss)
+    print(basedatoss.to_string())
 
     s = int(input("Presione 0 para volver al menú principal: "))
     print("")
 
-
-while s != 0:
-    menu()
+    while s != 0:
+        menu()
 
 # define clase
 global lista
@@ -99,8 +99,9 @@ def menu() :
         print("11. Terminar.")
         ingreso = (input("Su respuesta: "))
         if ingreso == '1':
-            libro.mostrar_libros()
-            print("Se han cargado n libros")
+            basedatoss.to_string()
+            print("Se han cargado los libros")
+            input('presione enter para continuar')
             selec = True
         elif ingreso == '2':
             mostrar_libros_guardados()
@@ -140,3 +141,5 @@ def menu() :
 
 def main():
     menu()
+if __name__ == '__main__':
+    main()
