@@ -44,6 +44,8 @@ def registrarlibro():
 
     while s != 0:
         menu()
+
+
 #funcion para ver los libros registrados
 def ver_libros_reg():
     print('\n**********AQUI PUEDES VER LIBROS REGISTRADOS**********')
@@ -55,6 +57,7 @@ def ver_libros_reg():
 
     while s != 0:
         menu()
+
 
 #funcion para buscar libros por isbn o titulo
 def buscarlibro():
@@ -70,46 +73,66 @@ def buscarlibro():
 
     while s != 0:
         menu()
+
+
+
+
 #funcion menu
-def menu() :
+"""def menu() :
     selec = 0
-    salir = 10
-    print("\nBIENVENIDOS A LA MICROBIBLIOTECA")
-    print("********************************")
-    while selec != salir:
-        print("\n--Elija una de las opciones:--\n")
-        print("1. Mostrar libros guardados")
-        print("2. Agregar información de un nuevo libro")
-        print("3. Ver libros registrados")
+    salir = 10"""
+def menu() :
+    selec = True
+    print("BIENVENIDOS A LA MICROBIBLIOTECA")
+    print("***************")
+    while (selec==True):
+        print("--Elija una de las opciones:--")
+        print("1. Cargar libros guardados")
+        print("3. Agregar informacion de un nuevo libro")
+        print("2. Mostrar libros")
         print("4. Eliminar un libro")
-        print("5. Buscar libro por código ISBN")
-        print("6. Ordenar libros por título")
-        print("7. Buscar libro por autor, editorial, género")
+        print("5. Buscar libro por codigo ISBN")
+        print("6. Ordenar libros por titulo")
+        print("7. Buscar libro por autor, editorial, genero")
         print("8. Buscar libro por cantidad de autores")
         print("9. Editar datos de un libro")
         print("10. Guardar libro")
-        selec = int(input("Ingrese su opción: "))
-
-        if selec == 1:
-            mostrar_libros_guardados()
-        elif selec == 2:
-            registrarlibro()
-        elif selec == 3:
-            ver_libros_reg()
-        elif selec == 4:
-            eliminarlibro()
-        elif selec == 5:
+        print("11. Terminar.")
+        ingreso = (input("Su respuesta: "))
+        if ingreso == '1':
+             mostrar_libros_guardados()
+            selec = True
+        elif ingreso == '2':
+            registrarlibro())
+            selec = True
+        elif ingreso == '3':
+            er_libros_reg()
+            selec = True
+        elif ingreso == '4':
+             eliminarlibro()
+            selec = True
+        elif ingreso == '5':
             buscarlibro()
-        elif selec == 6:
+            selec = True
+        elif ingreso == '6':
+            libro.buscar_titulo()
+            selec = True
+        elif ingreso == '7':
+            print(libro.buscar_libro())
+            selec = True
+        elif ingreso == '8':
             print('ga')
-        elif selec == 7:
+            selec = True
+        elif ingreso == '9':
             print('ga')
-        elif selec == 8:
-            buscarlibro()
-        elif selec == 9:
+            selec = True
+        elif ingreso == '10':
             print('ga')
-        elif selec == 10:
-            print('ga')
+            selec = True
+        elif ingreso =='11':
+            print('Programa finalizado. Hasta la proxima!!')
+            selec = False
         else:
-            print('Asigne un valor valido')              
-menu()
+            print('\nAsigne un valor valido\n')
+            input('Presione enter para continuar')
+            selec = True
