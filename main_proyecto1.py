@@ -5,17 +5,51 @@ import pandas as pd
 
 
 #opcion 1 mostrar libros guardados
-def mostrar_libros_guardados():
-            print("********** ESTOS SON NUESTROS LIBROS GUARDADOS **********")
-            basedatoss = pd .read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
-            print(basedatoss)
 
-            s = input("presione cualquier tecla para volver al menú principal: ")
+def mostrar_libros_guardados():
+    print("****************** ESTOS SON NUESTROS LIBROS GUARDADOS ******************")
+    basedatoss = pd .read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
+     print(basedatoss)
+       s = input("presione cualquier tecla para volver al menú principal: ")
             print("")
 
             while s != 0:
              menu()
+         
+       
+#funcion para ver los libros registrados
 
+def ver_libros_reg():
+    print('\n******************AQUI PUEDES VER LIBROS REGISTRADOS******************')
+    for l in lista:
+    print (l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
+
+      s = input("presione cualquier tecla para volver al menú principal: ")
+      print("")
+
+    while s != 0:
+        menu()
+      
+      
+#fncion para poder registrar libros  
+
+def registrarlibro():
+    print("\nAQUI PUEDES REGISTRAR DATOS DE UN NUEVO LIBRO")
+    print("*********************************************")
+    l = libro()
+    l.ids = (input("introduzca el id del libro: "))
+    l.título = (input("introduzca el título del libro: "))
+    l.género= (input("introduzca a que género pertenece el libro: "))
+    l.isbn= (input("introduzca el isbn del libro: "))
+    l.editorial = (input("introduzca la editorial del libro: "))
+    l.autores = (input("introduzca el el autor o los autores del libro: "))
+    lista.append(l)
+    
+    s = input("presione cualquier tecla para volver al menú principal: ")
+    print("")
+
+    while s != 0:
+        menu()
 
 
 
@@ -53,11 +87,10 @@ def menu() :
             mostrar_libros_guardados()
             selec = True
         elif ingreso == '2':
-            mostrar_libros_guardados()
+            ver_libros_reg()
             selec = True
         elif ingreso == '3':
             registrarlibro()
-            ver_libros_reg()
             selec = True
         elif ingreso == '4':
             eliminarlibro()
