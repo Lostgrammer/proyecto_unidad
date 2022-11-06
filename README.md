@@ -43,7 +43,7 @@
 
 ## Participantes:
 * Carlos Vega.
-* Fernando Leon.
+* Luis Leon.
 * Patrick Celis.
 
 # Licencia
