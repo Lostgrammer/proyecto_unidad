@@ -10,7 +10,7 @@ def mostrar_libros_guardados():
     print("****************** ESTOS SON NUESTROS LIBROS GUARDADOS ******************")
     basedatoss = pd .read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
     print(basedatoss)
-    s = input("presione cualquier tecla para volver al menú principal: ")
+    s = input("Presione cualquier tecla para volver al menú principal: ")
     print("")
 
     while s != 0:
@@ -35,11 +35,11 @@ class libro:
 #funcion para ver los libros registrados
 
 def ver_libros_reg():
-    print('\n******************AQUI PUEDES VER LIBROS REGISTRADOS******************')
+    print('\n******************AQUÍ PUEDES VER LIBROS REGISTRADOS******************')
     for l in lista:
      print (l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
 
-     s = input("presione cualquier tecla para volver al menú principal: ")
+     s = input("Presione cualquier tecla para volver al menú principal: ")
     print("")
 
     while s != 0:
@@ -52,15 +52,15 @@ def registrarlibro():
     print("\nAQUI PUEDES REGISTRAR DATOS DE UN NUEVO LIBRO")
     print("*********************************************")
     l = libro()
-    l.ids = (input("introduzca el id del libro: "))
-    l.título = (input("introduzca el título del libro: "))
-    l.género= (input("introduzca a que género pertenece el libro: "))
-    l.isbn= (input("introduzca el isbn del libro: "))
-    l.editorial = (input("introduzca la editorial del libro: "))
-    l.autores = (input("introduzca el el autor o los autores del libro: "))
+    l.ids = (input("Introduzca el id del libro: "))
+    l.título = (input("Introduzca el título del libro: "))
+    l.género= (input("Introduzca a que género pertenece el libro: "))
+    l.isbn= (input("Introduzca el ISBN del libro: "))
+    l.editorial = (input("Introduzca la editorial del libro: "))
+    l.autores = (input("Introduzca el autor o los autores del libro: "))
     lista.append(l)
     
-    s = input("presione cualquier tecla para volver al menú principal: ")
+    s = input("Presione cualquier tecla para volver al menú principal: ")
     print("")
 
     while s != 0:
@@ -71,14 +71,14 @@ def registrarlibro():
  #funcion para buscar libros por isbn o titulo
  
 def buscarlibro():
-    print("\n**********AQUI PUEDES BUSCAR DATOS DEL LIBRO POR ISBN O TÍTULO**********\n")
+    print("\n**********AQUÍ PUEDES BUSCAR DATOS DEL LIBRO POR ISBN O TÍTULO**********\n")
     filtro = input("ingrese isbn o titulo a buscar: ")
 
     for l in lista:
         if l.isbn == filtro or l.título == filtro:
             print("\n",l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
     
-    s = input("presione cualquier tecla para volver al menú principal: ")
+    s = input("Presione cualquier tecla para volver al menú principal: ")
     print("")
 
     while s != 0:
@@ -104,11 +104,11 @@ def menu() :
         print("--Elija una de las opciones:--")
         print("1. Cargar libros guardados")
         print("2. Mostrar libros")
-        print("3. Agregar informacion de un nuevo libro")
+        print("3. Agregar información de un nuevo libro")
         print("4. Eliminar un libro")
         print("5. Buscar libro por codigo ISBN")
         print("6. Ordenar libros por titulo")
-        print("7. Buscar libro por autor, editorial, genero")
+        print("7. Buscar libro por autor, editorial, género")
         print("8. Buscar libro por cantidad de autores")
         print("9. Editar datos de un libro")
         print("10. Guardar libro")
@@ -145,7 +145,7 @@ def menu() :
             print('ga')
             selec = True
         elif ingreso =='11':
-            print('Programa finalizado. Hasta la proxima!!')
+            print('Programa finalizado. Hasta la próxima!!')
             selec = False
         else:
             print('\nAsigne un valor valido\n')
