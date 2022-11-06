@@ -54,11 +54,6 @@ def ver_libros_reg():
         )
 
         s = input("Presione cualquier tecla para volver al menú principal: ")
-    print("")
-
-    while s != 0:
-        menu()
-
 
 # fncion para poder registrar libros
 
