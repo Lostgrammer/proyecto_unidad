@@ -50,6 +50,24 @@ def registrarlibro():
 
     while s != 0:
         menu()
+      
+      
+      
+ #funcion para buscar libros por isbn o titulo
+ 
+def buscarlibro():
+    print("\n**********AQUI PUEDES BUSCAR DATOS DEL LIBRO POR ISBN O TÍTULO**********\n")
+    filtro = input("ingrese isbn o titulo a buscar: ")
+
+    for l in lista:
+        if l.isbn == filtro or l.título == filtro:
+            print("\n",l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
+    
+    s = input("presione cualquier tecla para volver al menú principal: ")
+    print("")
+
+    while s != 0:
+        menu()
 
 
 
