@@ -9,12 +9,12 @@ import pandas as pd
 def mostrar_libros_guardados():
     print("****************** ESTOS SON NUESTROS LIBROS GUARDADOS ******************")
     basedatoss = pd .read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
-     print(basedatoss)
-       s = input("presione cualquier tecla para volver al menú principal: ")
-            print("")
+    print(basedatoss)
+    s = input("presione cualquier tecla para volver al menú principal: ")
+    print("")
 
-            while s != 0:
-             menu()
+    while s != 0:
+     menu()
          
        
 #funcion para ver los libros registrados
@@ -22,10 +22,10 @@ def mostrar_libros_guardados():
 def ver_libros_reg():
     print('\n******************AQUI PUEDES VER LIBROS REGISTRADOS******************')
     for l in lista:
-    print (l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
+     print (l.ids, "-" ,l.título, "-" ,l.género, "-" ,l.isbn, "-" ,l.editorial, "-" ,l.autores)
 
-      s = input("presione cualquier tecla para volver al menú principal: ")
-      print("")
+     s = input("presione cualquier tecla para volver al menú principal: ")
+    print("")
 
     while s != 0:
         menu()
@@ -50,8 +50,6 @@ def registrarlibro():
 
     while s != 0:
         menu()
-
-
 
 
 
