@@ -1,4 +1,20 @@
+#import pandas 
+import pandas as pd
+ 
 
+
+
+#opcion 1 mostrar libros guardados
+def mostrar_libros_guardados():
+            print("********** ESTOS SON NUESTROS LIBROS GUARDADOS **********")
+            basedatoss = pd .read_csv(r'C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv')
+            print(basedatoss)
+
+            s = input("presione cualquier tecla para volver al menú principal: ")
+            print("")
+
+            while s != 0:
+             menu()
 
 
 
@@ -34,9 +50,7 @@ def menu() :
         print("11. Terminar.")
         ingreso = (input("Su respuesta: "))
         if ingreso == '1':
-            basedatoss.to_string()
-            print("Se han cargado los libros")
-            input('presione enter para continuar')
+            mostrar_libros_guardados()
             selec = True
         elif ingreso == '2':
             mostrar_libros_guardados()
