@@ -96,7 +96,45 @@ def buscarlibro():
 
 
 #opcion 7 funcion buscar libro por autor
-
+def buscar_libro():
+    basedatoss = pd.read_csv(
+        "Libros.csv"
+    )
+    s=True
+    while(s==True):
+        ingreso=input('\n Por cual tipo desea buscar? Autor / Editorial / Genero \n').upper()
+        if(ingreso=='AUTOR'):
+            print(basedatoss['autor'])
+            lista = []
+            entrada = input('Que autor quiere buscar?\n').lower()
+            #el .apply es para modificar los valores a minusculas y asi pueda compararse con el input
+            for i in basedatoss['autor'].apply(str.lower):
+                if (entrada in i):
+                    lista.append(i)
+            print(lista)
+            s=False
+        elif(ingreso=='EDITORIAL'):
+            print(basedatoss['editorial'])
+            lista = []
+            entrada = input('Que editorial quiere buscar?\n').lower()
+            for i in basedatoss['editorial'].apply(str.lower):
+                if (entrada in i):
+                    lista.append(i)
+            print(lista)
+            s=False
+        elif (ingreso == 'GENERO'):
+            print(basedatoss['genero'])
+            lista = []
+            entrada = input('Que genero quiere buscar?\n').lower()
+            for i in basedatoss['genero'].apply(str.lower):
+                if (entrada in i):
+                    lista.append(i)
+            print(lista)
+            s = False
+        else:
+            print('Asigne un valor valido')
+            s=True
+    input('Presione enter para continuar\n')
 
 def menu():
     selec = True
@@ -135,7 +173,7 @@ def menu():
             libro.buscar_titulo()
             selec = True
         elif ingreso == "7":
-            print(libro.buscar_libro())
+            print(buscar_libro())
             selec = True
         elif ingreso == "8":
             print("ga")
