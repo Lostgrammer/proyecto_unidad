@@ -32,10 +32,7 @@ class libro:
         self.editorial = ""
         self.autores = ""
 
-
 # funcion para ver los libros registrados
-
-
 def ver_libros_reg():
     print("\n******************AQUÍ PUEDES VER LIBROS REGISTRADOS******************")
     for l in lista:
