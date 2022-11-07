@@ -1,12 +1,33 @@
 import requests
 import json
-"""
-url_generacion = 'https://pokeapi.co/api/v2/generation/'
-url_forma_pokemon = 'https://pokeapi.co/api/v2/pokemon-form/'
-url_habilidades = 'https://pokeapi.co/api/v2/ability/'
-url_habitad = 'https://pokeapi.co/api/v2/pokemon-habitat/'
-url_tipos = 'https://pokeapi.co/api/v2/type/
-'"""
+
+
+def mostrar_x_habitat(num):
+ url = ("https://pokeapi.co/api/v2/pokemon-habitat/")
+ peticion = requests.get(url + str(num) )
+ datos = json.loads(peticion.content)
+ s = [nombre['name'] for nombre in datos['pokemon_species']]
+ print(s)  
+
+
+print("**********AQUI PODRAS VER LOS POKEMONS QUE EXISTEN POR HABITAT**********")
+print("1 Pokémon de caverna.")
+print("2 Pokémon de bosque.")
+print("3 Pokémon de pradera.")
+print("4 Pokémon de montaña.")
+print("5 Pokémon de habitat desconocido.")
+print("6 Pokémon de terreno dificl.")
+print("7 Pokémon de mar.")
+print("8 Pokémon de ciudad.")
+print("8 Pokémon de agua.")
+num = int(input("\ningrese un numeor de acuerdo al habitat que desea ver: "))
+print("")
+mostrar_x_habitat(num)
+
+
+
+
+
 def menu():
     selec = True
     print("BIENVENIDOS A NUESTRA POKEDEX XD")
