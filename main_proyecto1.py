@@ -55,9 +55,7 @@ def ver_libros_reg():
 
         s = input("Presione cualquier tecla para volver al menú principal: \n")
 
-# funcion para poder registrar libros
-
-
+# opcion 3 funcion para poder registrar libros
 def registrarlibro():
     print("\nAQUI PUEDES REGISTRAR DATOS DE UN NUEVO LIBRO")
     print("*********************************************")
@@ -73,8 +71,6 @@ def registrarlibro():
     s = input("Presione cualquier tecla para volver al menú principal: \n")
 
 # funcion para buscar libros por isbn o titulo
-
-
 def buscarlibro():
     print(
         "\n**********AQUÍ PUEDES BUSCAR DATOS DEL LIBRO POR ISBN O TÍTULO**********\n"
@@ -156,10 +152,8 @@ def menu():
             input("Presione enter para continuar")
             selec = True
 
-
 def main():
     menu()
-
 
 if __name__ == "__main__":
     main()
