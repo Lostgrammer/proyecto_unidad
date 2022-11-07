@@ -1,3 +1,4 @@
+
 def menu():
     selec = True
     print("BIENVENIDOS A NUESTRA POKEDEX XD")
