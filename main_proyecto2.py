@@ -134,6 +134,15 @@ print("")
 
 mostrar_x_tipo(num)
 
+#mostrar habilidades
+def mostrar_habilidades():
+    peticion_habilidades = requests.get('https://pokeapi.co/api/v2/ability/')
+    # manipular solo los datos que necesitamos
+    habilidades = peticion_habilidades.json()
+    lista_habilidad = habilidades["results"]
+    tipos_habilidad = [tipo["name"] for tipo in habilidades["results"]]
+    print(tipos_habilidad)
+
 
 #Funcion de menu principal
 
@@ -157,7 +166,7 @@ def menu():
             mostrar_forma()
             selec = True
         elif ingreso == "3":
-            mostrar_abilidad()
+            mostrar_habilidades()
             selec = True
         elif ingreso == "4":
 
@@ -179,4 +188,4 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> ranaluis
+
