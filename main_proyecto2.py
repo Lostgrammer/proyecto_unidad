@@ -1,6 +1,71 @@
 import requests
 import json
 
+peticion = requests.get ('https://pokeapi.co/api/v2/generation/')
+datos = peticion.json()
+
+def mostrar_generacion():
+ingreso_generacion = input("Ingrese generación para buscar sus respectivos pokemones (1 al 8): ")
+
+if ingreso_generacion == "1":
+    lista_generacion = [datos_lista["0"]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "2":
+    lista_generacion = [datos_lista[1]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "3":
+    lista_generacion = [datos_lista[2]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "4":
+    lista_generacion = [datos_lista[3]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "5":
+    lista_generacion = [datos_lista[4]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "6":
+    lista_generacion = [datos_lista[5]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "7":
+    lista_generacion = [datos_lista[6]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "8":
+    lista_generacion = [datos_lista[7]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+else:
+    print("\nAsigne un valor valido\n")
+    input("Presione enter para continuar")
 
 
 
@@ -29,15 +94,6 @@ print("8 Pokémon de agua.")
 num = int(input("\ningrese un numeor de acuerdo al habitat que desea ver: "))
 print("")
 mostrar_x_habitat(num)
-
-
-
-
-
-
-
-
-
 
 
 
