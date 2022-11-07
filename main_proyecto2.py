@@ -151,13 +151,13 @@ def menu():
         
         ingreso = input("Su respuesta: ")
         if ingreso == "1":
-            ga()
+            mostrar_generacion()
             selec = True
         elif ingreso == "2":
-            ga()
+            mostrar_forma()
             selec = True
         elif ingreso == "3":
-            ga()
+            mostrar_abilidad()
             selec = True
         elif ingreso == "4":
 
