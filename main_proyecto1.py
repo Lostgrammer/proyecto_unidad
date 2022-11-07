@@ -8,7 +8,7 @@ import pandas as pd
 def mostrar_libros_guardados():
     print("****************** ESTOS SON NUESTROS LIBROS GUARDADOS ******************")
     basedatoss = pd.read_csv(
-        r"C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv"
+        "Libros.csv"
     )
     print(basedatoss)
     s = input("Presione cualquier tecla para volver al menú principal: \n")
