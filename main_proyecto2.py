@@ -1,7 +1,6 @@
-import requests
-import json
 
 
+<<<<<<< HEAD
 def mostrar_x_habitat(num):
  url = ("https://pokeapi.co/api/v2/pokemon-habitat/")
  peticion = requests.get(url + str(num) )
@@ -71,3 +70,5 @@ def main():
 if __name__ == "__main__":
     main()
 
+=======
+>>>>>>> 8f0c018fe94dcdcdf6a679ecf0a685b6c9425cd3
