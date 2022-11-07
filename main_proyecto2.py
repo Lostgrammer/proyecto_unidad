@@ -1,55 +1,3 @@
-import requests
-import json
-
-
-
-
-
-
-#funcion para ver pokemons por habitat
-
-def mostrar_x_habitat(num):
- url = ("https://pokeapi.co/api/v2/pokemon-habitat/")
- peticion = requests.get(url + str(num) )
- datos = json.loads(peticion.content)
- s = [nombre['name'] for nombre in datos['pokemon_species']]
- print(s)  
-
-
-print("**********AQUI PODRAS VER LOS POKEMONS QUE EXISTEN POR HABITAT**********")
-print("1 Pokémon de caverna.")
-print("2 Pokémon de bosque.")
-print("3 Pokémon de pradera.")
-print("4 Pokémon de montaña.")
-print("5 Pokémon de habitat desconocido.")
-print("6 Pokémon de terreno dificl.")
-print("7 Pokémon de mar.")
-print("8 Pokémon de ciudad.")
-print("8 Pokémon de agua.")
-num = int(input("\ningrese un numeor de acuerdo al habitat que desea ver: "))
-print("")
-mostrar_x_habitat(num)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def menu():
     selec = True
@@ -93,3 +41,28 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+#agregue funcion para ver pokemon por habitat
+def mostrar_x_habitat(num):
+ url = ("https://pokeapi.co/api/v2/pokemon-habitat/")
+ peticion = requests.get(url + str(num) )
+ datos = json.loads(peticion.content)
+ s = [nombre['name'] for nombre in datos['pokemon_species']]
+ print(s)  
+
+
+print("**********AQUI PODRAS VER LOS POKEMONS QUE EXISTEN POR HABITAT**********")
+print("1 Pokémon de caverna.")
+print("2 Pokémon de bosque.")
+print("3 Pokémon de pradera.")
+print("4 Pokémon de montaña.")
+print("5 Pokémon de habitat desconocido.")
+print("6 Pokémon de terreno dificl.")
+print("7 Pokémon de mar.")
+print("8 Pokémon de ciudad.")
+print("8 Pokémon de agua.")
+num = int(input("\ningrese un numeor de acuerdo al habitat que desea ver: "))
+print("")
+mostrar_x_habitat(num)   
