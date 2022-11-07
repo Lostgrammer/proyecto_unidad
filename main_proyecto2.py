@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-'''url_generacion = 'https://pokeapi.co/api/v2/generation/'
-url_forma_pokemon = 'https://pokeapi.co/api/v2/pokemon-form/'
-url_habilidades = 'https://pokeapi.co/api/v2/ability/'
-url_habitad = 'https://pokeapi.co/api/v2/pokemon-habitat/'
-url_tipos = 'https://pokeapi.co/api/v2/type/''''
-
-
-import requests
-
-if __name__ == '__main__':
-    url_generacion = 'https://pokeapi.co/api/v2/generation'
-
-    respuesta = requests.get(url_generacion)
-    if respuesta.status_code == 200:
-
-        payload = respuesta.json()
-        resultados = payload.get('resultados', [])
-
-        if resultados:
-            for generacion in resultados:
-                numero = generacion['numero']
-                print("Las generaciones son :", numero)
-=======
 import requests
 import json
 """
@@ -31,17 +7,19 @@ url_habilidades = 'https://pokeapi.co/api/v2/ability/'
 url_habitad = 'https://pokeapi.co/api/v2/pokemon-habitat/'
 url_tipos = 'https://pokeapi.co/api/v2/type/
 '"""
+
+
 def menu():
     selec = True
     print("BIENVENIDOS A NUESTRA POKEDEX XD")
     print("********************************")
     while selec == True:
         print("--Elija una de las opciones:--")
-        print("1. VER POKEMONS POR GENERACION")
+        print("1. VER POKEMONS POR GENERACIÓN")
         print("2. VER POKEMONS POR FORMA")
         print("3. VER POKEMON POR HABILIDADES")
         print("4. VER POKEMONS POR HABITATS.")
-        print("5. VE RPOKEMONS POR TIPOS.")
+        print("5. VER POKEMONS POR TIPOS.")
         
         ingreso = input("Su respuesta: ")
         if ingreso == "1":
@@ -73,4 +51,4 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> ranaluis
+
