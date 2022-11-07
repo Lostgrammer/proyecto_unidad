@@ -1,6 +1,73 @@
 import requests
 import json
 
+#Funcion para ver pokemones por generacion
+
+peticion = requests.get ('https://pokeapi.co/api/v2/generation/')
+datos = peticion.json()
+
+def mostrar_generacion():
+ingreso_generacion = input("Ingrese generación para buscar sus respectivos pokemones (1 al 8): ")
+
+if ingreso_generacion == "1":
+    lista_generacion = [datos_lista["0"]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "2":
+    lista_generacion = [datos_lista[1]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "3":
+    lista_generacion = [datos_lista[2]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "4":
+    lista_generacion = [datos_lista[3]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "5":
+    lista_generacion = [datos_lista[4]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "6":
+    lista_generacion = [datos_lista[5]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "7":
+    lista_generacion = [datos_lista[6]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+elif ingreso_generacion == "8":
+    lista_generacion = [datos_lista[7]["name"] for datos_lista in datos["results"]]
+    print(lista_generacion)
+
+    lista_de_pokemones = [pokemon["name"] for pokemon in ["pokemon_species"]]
+    print(lista_de_pokemones)
+
+else:
+    print("\nAsigne un valor valido\n")
+    input("Presione enter para continuar")
 
 
 
@@ -33,23 +100,42 @@ mostrar_x_habitat(num)
 
 
 
+#añadi funcion para ver pokemons por tipo
+def mostrar_x_tipo(num):
+ url = ("https://pokeapi.co/api/v2/type/")
+ peticion = requests.get(url + str(num) )
+ datos = json.loads(peticion.content)
+ s = [pok['pokemon']['name'] for pok in datos['pokemon']]
+ print(s) 
+print("**********AQUI PODRAS VER LOS POKEMONS QUE EXISTEN POR Tipo**********")
+print("1 Pokémon de tipo normal.")
+print("2 Pokémon de tipo lucha.")
+print("3 Pokémon de tipo volador.")
+print("4 Pokémon de tipo veneno.")
+print("5 Pokémon de tipo tierra.")
+print("6 Pokémon de tipo roca.")
+print("7 Pokémon de tipo insecto.")
+print("8 Pokémon de tipo fantasma.")
+print("9 Pokémon de tipo acero.")
+print("10 Pokémon de tipo fuego.")
+print("11 Pokémon de tipo agua.")
+print("12 Pokémon de tipo planta.")
+print("13 Pokémon de tipo electrico.")
+print("14 Pokémon de tipo psiquico.")
+print("15 Pokémon de tipo hielo.")
+print("16 Pokémon de tipo dragon.")
+print("17 Pokémon de tipo oscuro.")
+print("18 Pokémon de tipo hada.")
+print("10001 Pokémon de tipo desconocido.")
+print("10002 Pokémon de tipo sombra.")
+
+num = int(input("\ningrese la el numero del tipo que quiere ver: "))
+print("")
+
+mostrar_x_tipo(num)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Funcion de menu principal
 
 def menu():
     selec = True
@@ -65,13 +151,13 @@ def menu():
         
         ingreso = input("Su respuesta: ")
         if ingreso == "1":
-            ga()
+            mostrar_generacion()
             selec = True
         elif ingreso == "2":
-            ga()
+            mostrar_forma()
             selec = True
         elif ingreso == "3":
-            ga()
+            mostrar_abilidad()
             selec = True
         elif ingreso == "4":
 
@@ -93,28 +179,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-#agregue funcion para ver pokemon por habitat
-def mostrar_x_habitat(num):
- url = ("https://pokeapi.co/api/v2/pokemon-habitat/")
- peticion = requests.get(url + str(num) )
- datos = json.loads(peticion.content)
- s = [nombre['name'] for nombre in datos['pokemon_species']]
- print(s)  
-
-
-print("**********AQUI PODRAS VER LOS POKEMONS QUE EXISTEN POR HABITAT**********")
-print("1 Pokémon de caverna.")
-print("2 Pokémon de bosque.")
-print("3 Pokémon de pradera.")
-print("4 Pokémon de montaña.")
-print("5 Pokémon de habitat desconocido.")
-print("6 Pokémon de terreno dificl.")
-print("7 Pokémon de mar.")
-print("8 Pokémon de ciudad.")
-print("8 Pokémon de agua.")
-num = int(input("\ningrese un numeor de acuerdo al habitat que desea ver: "))
-print("")
-mostrar_x_habitat(num)   
+>>>>>>> ranaluis
