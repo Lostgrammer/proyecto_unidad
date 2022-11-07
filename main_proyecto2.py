@@ -3,12 +3,22 @@ import json
 """
 url_generacion = 'https://pokeapi.co/api/v2/generation/'
 url_forma_pokemon = 'https://pokeapi.co/api/v2/pokemon-form/'
-url_habilidades = 'https://pokeapi.co/api/v2/ability/'
+'https://pokeapi.co/api/v2/ability/'
 url_habitad = 'https://pokeapi.co/api/v2/pokemon-habitat/'
 url_tipos = 'https://pokeapi.co/api/v2/type/
 '"""
+peticion_habilidades = requests.get('https://pokeapi.co/api/v2/ability/')
+#manipular solo los datos que necesitamos
+habilidades=peticion_habilidades.json()
+print(habilidades)
 
+lista_habilidad=habilidades["results"]
+print(lista_habilidad)
 
+tipos_habilidad=[tipo["name"]for tipo in habilidades["results"]]
+print(tipos_habilidad)
+
+'''
 def menu():
     selec = True
     print("BIENVENIDOS A NUESTRA POKEDEX XD")
@@ -51,4 +61,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+'''
