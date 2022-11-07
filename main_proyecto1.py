@@ -1,16 +1,22 @@
 # import pandas
 import pandas as pd
 
+# opcion 1 leer libros guardados
+def leer_libros():
 
-# opcion 1 mostrar libros guardados
+    basedatoss = pd.read_csv(
+        "Libros.csv"
+    )
+    print('Libros cargados correctamente')
+    s = input("Presione cualquier tecla para volver al menú principal: \n")
 
-
+# opcion 2 mostrar libros guardados
 def mostrar_libros_guardados():
     print("****************** ESTOS SON NUESTROS LIBROS GUARDADOS ******************")
     basedatoss = pd.read_csv(
         "Libros.csv"
     )
-    print(basedatoss)
+    print(basedatoss.to_string())
     s = input("Presione cualquier tecla para volver al menú principal: \n")
 
 # define clase
@@ -113,10 +119,10 @@ def menu():
         print("11. Terminar.")
         ingreso = input("Su respuesta: ")
         if ingreso == "1":
-            mostrar_libros_guardados()
+            leer_libros()
             selec = True
         elif ingreso == "2":
-            ver_libros_reg()
+            mostrar_libros_guardados()
             selec = True
         elif ingreso == "3":
             registrarlibro()
