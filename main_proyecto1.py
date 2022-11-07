@@ -64,10 +64,9 @@ def registrarlibro():
     l.editorial = input("Introduzca la editorial del libro: ")
     l.autores = input("Introduzca el autor o los autores del libro: ")
     lista.append(l)
-
     s = input("Presione cualquier tecla para volver al menú principal: \n")
 
-# funcion para buscar libros por isbn o titulo
+# opcion 5 funcion para buscar libros por isbn o titulo
 def buscarlibro():
     print(
         "\n**********AQUÍ PUEDES BUSCAR DATOS DEL LIBRO POR ISBN O TÍTULO**********\n"
@@ -92,6 +91,12 @@ def buscarlibro():
             )
 
     s = input("Presione cualquier tecla para volver al menú principal: \n")
+
+# opcion 6 funcion ordenar por titulos
+
+
+#opcion 7 funcion buscar libro por autor
+
 
 def menu():
     selec = True
