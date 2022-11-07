@@ -11,17 +11,11 @@ def mostrar_libros_guardados():
         r"C:\Users\Fernando Leon\Desktop\ramaluis_2\csv\libros.csv"
     )
     print(basedatoss)
-    s = input("Presione cualquier tecla para volver al menú principal: ")
-    print("")
-
-    while s != 0:
-        menu()
-
+    s = input("Presione cualquier tecla para volver al menú principal: \n")
 
 # define clase
 global lista
 lista = list()
-
 
 class libro:
     def __init__(self):
@@ -53,9 +47,9 @@ def ver_libros_reg():
             l.autores,
         )
 
-        s = input("Presione cualquier tecla para volver al menú principal: ")
+        s = input("Presione cualquier tecla para volver al menú principal: \n")
 
-# fncion para poder registrar libros
+# funcion para poder registrar libros
 
 
 def registrarlibro():
@@ -70,12 +64,7 @@ def registrarlibro():
     l.autores = input("Introduzca el autor o los autores del libro: ")
     lista.append(l)
 
-    s = input("Presione cualquier tecla para volver al menú principal: ")
-    print("")
-
-    while s != 0:
-        menu()
-
+    s = input("Presione cualquier tecla para volver al menú principal: \n")
 
 # funcion para buscar libros por isbn o titulo
 
@@ -103,12 +92,7 @@ def buscarlibro():
                 l.autores,
             )
 
-    s = input("Presione cualquier tecla para volver al menú principal: ")
-    print("")
-
-    while s != 0:
-        menu()
-
+    s = input("Presione cualquier tecla para volver al menú principal: \n")
 
 def menu():
     selec = True
